@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 		<link rel="icon" type="image/png" href="static/logos/katacoda-favicon-16x16.png" sizes="16x16">
 
-		<link rel="stylesheet" type="text/css" href="css/asciinema-player.css" />		
+		<link rel="stylesheet" type="text/css" href="plugin/asciinema/asciinema-player.css">		
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -112,7 +112,8 @@ $ katacoda push
 
 				<section>
 					<h2>Mi primer escenario</h2>
-					<asciinema-player src="asciinema/189960.cast" cols="120" rows="18"></asciinema-player>
+					<script src="https://asciinema.org/a/189960.js" id="asciicast-189960" async></script>
+					<!-- <asciinema-player src="cast/189960.cast" cols=80 rows=25></asciinema-player> -->
 				</section>
 				
 				<section>
@@ -179,7 +180,7 @@ $ katacoda push
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-		<script src="js/asciinema-player.js"></script>
+		<script src="plugin/asciinema/asciinema-player.js"></script>
 		<script>
 
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -193,6 +194,7 @@ $ katacoda push
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
+					// { src: 'plugin/asciinema/asciinema-player.js' },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
